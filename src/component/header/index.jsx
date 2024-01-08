@@ -2,28 +2,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 export function Header({ Logo }) {
-  const mapArr = [
-    {
-      id: 0,
-      path: "/",
-      text: "Home",
-    },
-    {
-      id: 1,
-      path: "/about",
-      text: "About",
-    },
-    {
-      id: 2,
-      path: "/services",
-      text: "Services",
-    },
-    {
-      id: 3,
-      path: "/contacts",
-      text: "Contacts",
-    },
-  ];
+  
   return (
     <header className="page-header">
       <div className="container">
