@@ -1,0 +1,37 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  :root {
+    --slow: 0.6s;
+  }
+  
+  .page-footer {
+    background-color: #f8f8f8;
+    padding-block: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .logo {
+    color: coral;
+  }
+  
+  .footer-nav {
+    display: flex;
+  }
+  
+  .footer-nav_link {
+    padding: 10px;
+    color: coral;
+    transition: var(--slow);
+  }
+  
+  .footer-nav_link:hover {
+    background-color: coral;
+    color: #f8f8f8;
+    cursor: pointer;
+    border-radius: 4px;
+  }
