@@ -32,7 +32,7 @@ export function Header({ Logo }) {
             {Logo}
           </Link>
           <nav className="header-nav">
-            <Link to={"/"} className="header-nav_link">
+            {/* <Link to={"/"} className="header-nav_link">
               Home
             </Link>
             <Link to={"/about"} className="header-nav_link">
@@ -43,7 +43,15 @@ export function Header({ Logo }) {
             </Link>
             <Link to={"/contacts"} className="header-nav_link">
               Contacts
-            </Link>
+            </Link> */}
+            {mapArr.map(({ id, path, text }) => (
+              <Link
+                className="header-nav_link"
+                key={id}
+                to={path}
+                text={text}
+              ></Link>
+            ))}
           </nav>
           <div className="burger-menu">
             <span></span>
