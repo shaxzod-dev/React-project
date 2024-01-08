@@ -5,125 +5,32 @@ import imgX from "./assets/X.svg";
 import img2 from "./assets/card-img_2.png";
 import imgY from "./assets/Y-img.svg";
 import img3 from "./assets/card-img_3.png";
-import { Header } from "./component/header";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import About from "./pages/About";
+import Contacts from "./pages/Contacts";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+
 function App() {
-  const cardData = [
+  const sitemap = createBrowserRouter([
     {
-      id: 0,
-      img: img,
-      imgX: imgX,
-      title: "Вариативный замок Golden Soft для отеля",
-      sub: "Нет в наличии",
-      price1: "7 000₽",
-      price2: "8 000₽",
+      path: "/",
+      element: <Home />,
     },
     {
-      id: 1,
-      img: img2,
-      imgX: imgY,
-      title: "Дверной Замок Golden Soft для офиса",
-      sub: "В наличии",
-      price1: "33 000₽",
-      price2: "39 000₽",
+      path: "/about",
+      element: <About />,
     },
     {
-      id: 2,
-      img: img3,
-      imgX: imgY,
-      title: "Дверной Замок Golden Soft для офиса",
-      sub: "В наличии",
-      price1: "9 000₽",
-      price2: "12 000₽",
+      path: "/contacts",
+      element: <Contacts />,
     },
     {
-      id: 0,
-      img: img,
-      imgX: imgX,
-      title: "Вариативный замок Golden Soft для отеля",
-      sub: "Нет в наличии",
-      price1: "7 000₽",
-      price2: "8 000₽",
+      path: "/services",
+      element: <Services />,
     },
-    {
-      id: 1,
-      img: img2,
-      imgX: imgY,
-      title: "Дверной Замок Golden Soft для офиса",
-      sub: "В наличии",
-      price1: "33 000₽",
-      price2: "39 000₽",
-    },
-    {
-      id: 2,
-      img: img3,
-      imgX: imgY,
-      title: "Дверной Замок Golden Soft для офиса",
-      sub: "В наличии",
-      price1: "9 000₽",
-      price2: "12 000₽",
-    },
-    {
-      id: 0,
-      img: img,
-      imgX: imgX,
-      title: "Вариативный замок Golden Soft для отеля",
-      sub: "Нет в наличии",
-      price1: "7 000₽",
-      price2: "8 000₽",
-    },
-    {
-      id: 1,
-      img: img2,
-      imgX: imgY,
-      title: "Дверной Замок Golden Soft для офиса",
-      sub: "В наличии",
-      price1: "33 000₽",
-      price2: "39 000₽",
-    },
-    {
-      id: 2,
-      img: img3,
-      imgX: imgY,
-      title: "Дверной Замок Golden Soft для офиса",
-      sub: "В наличии",
-      price1: "9 000₽",
-      price2: "12 000₽",
-    },
-    {
-      id: 0,
-      img: img,
-      imgX: imgX,
-      title: "Вариативный замок Golden Soft для отеля",
-      sub: "Нет в наличии",
-      price1: "7 000₽",
-      price2: "8 000₽",
-    },
-    {
-      id: 1,
-      img: img2,
-      imgX: imgY,
-      title: "Дверной Замок Golden Soft для офиса",
-      sub: "В наличии",
-      price1: "33 000₽",
-      price2: "39 000₽",
-    },
-    {
-      id: 2,
-      img: img3,
-      imgX: imgY,
-      title: "Дверной Замок Golden Soft для офиса",
-      sub: "В наличии",
-      price1: "9 000₽",
-      price2: "12 000₽",
-    },
-  ];
-  return (
-    <div className="container content">
-      {cardData.map((el) => (
-        <Card key={el.id} {...el} />
-      ))}
-    </div>
-  );
+  ]);
+  return <RouterProvider router={sitemap} />;
 }
 
 export default App;

@@ -10,6 +10,16 @@
 .page-header {
   background-color: #f8f8f8;
   padding-block: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cantent{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
