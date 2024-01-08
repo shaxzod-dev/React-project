@@ -1,11 +1,11 @@
 import "./App.css";
 import Card from "./component/cards";
-import { Header } from "./component/header";
 import img from "./assets/card-img.png";
 import imgX from "./assets/X.svg";
 import img2 from "./assets/card-img_2.png";
 import imgY from "./assets/Y-img.svg";
 import img3 from "./assets/card-img_3.png";
+import { Header } from "./component/header";
 function App() {
   const cardData = [
     {
@@ -119,17 +119,8 @@ function App() {
   ];
   return (
     <div className="container content">
-      {/* <Header Logo="Header-logo" /> */}
       {cardData.map((el) => (
-        <Card
-          key={el.id}
-          img={el.img}
-          imgX={el.imgX}
-          title={el.title}
-          sub={el.sub}
-          price1={el.price1}
-          price2={el.price2}
-        />
+        <Card key={el.id} {...el} />
       ))}
     </div>
   );
