@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./style.css";
+import { linkData } from "../Data";
 
 export function Header({ Logo }) {
   
@@ -11,25 +12,10 @@ export function Header({ Logo }) {
             {Logo}
           </Link>
           <nav className="header-nav">
-            {/* <Link to={"/"} className="header-nav_link">
-              Home
-            </Link>
-            <Link to={"/about"} className="header-nav_link">
-              About Us
-            </Link>
-            <Link to={"/services"} className="header-nav_link">
-              Services
-            </Link>
-            <Link to={"/contacts"} className="header-nav_link">
-              Contacts
-            </Link> */}
-            {mapArr.map(({ id, path, text }) => (
-              <Link
-                className="header-nav_link"
-                key={id}
-                to={path}
-                text={text}
-              ></Link>
+            {linkData.map(({ id, path, text }) => (
+              <Link key={id} to={path} className="header-nav_link">
+                {text}
+              </Link>
             ))}
           </nav>
           <div className="burger-menu">

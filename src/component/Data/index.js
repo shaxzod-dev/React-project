@@ -1,4 +1,4 @@
-const mapArr = [
+export const linkData = [
   {
     id: 0,
     path: "/",
@@ -7,7 +7,7 @@ const mapArr = [
   {
     id: 1,
     path: "/about",
-    text: "About",
+    text: "About Us",
   },
   {
     id: 2,
