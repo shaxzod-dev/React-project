@@ -18,16 +18,14 @@ const Home = () => {
       <Header Logo={"Header-logo"} />
       <div className="container">
         <div className="content">
-          <div className="country">
-            <h2 className="title">Home</h2>
-            {countries.map((el) => {
-              <div className="elements">
-                <p>{el.name}</p>
-                <p>{el.capital}</p>
-                <p>{el.languages}</p>
-              </div>;
-            })}
-          </div>
+            {/* {countries.map((el) => (
+              <div className="country">
+                <p className="country-text">Name:{el.name}</p>
+                <p className="a-country-text">Capital:{el.capital}</p>
+                <p className="c-country-text">Currency:{el.currency}</p>
+                <p className="d-country-text">Population:{el.population}</p>
+              </div>
+            ))} */}
         </div>
       </div>
     </div>
