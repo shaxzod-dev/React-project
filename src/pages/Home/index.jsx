@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "../../component/header";
 import "./style.css";
 import { countries } from "../../component/Data";
@@ -17,15 +17,16 @@ const Home = () => {
     <div>
       <Header Logo={"Header-logo"} />
       <div className="container">
+        <h2 className="title">Home</h2>
         <div className="content">
-            {/* {countries.map((el) => (
-              <div className="country">
-                <p className="country-text">Name:{el.name}</p>
-                <p className="a-country-text">Capital:{el.capital}</p>
-                <p className="c-country-text">Currency:{el.currency}</p>
-                <p className="d-country-text">Population:{el.population}</p>
-              </div>
-            ))} */}
+          {countries.map((el) => (
+            <div className="country">
+              <p className="country-text">Name:{el.name}</p>
+              <p className="a-country-text">Capital:{el.capital}</p>
+              <p className="c-country-text">Currency:{el.currency}</p>
+              <p className="d-country-text">Population:{el.population}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
