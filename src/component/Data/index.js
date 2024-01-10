@@ -2034,4 +2034,3 @@ export const countries = [
     currency: "Botswana pula",
   },
 ];
-
