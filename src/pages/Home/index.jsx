@@ -69,6 +69,7 @@ const Home = () => {
     }
   }
   console.log(result);
+  
   return (
     <div>
       <Header Logo={"Header-logo"} />
