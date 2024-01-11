@@ -21,7 +21,7 @@ export const linkData = [
   },
 ];
 
-export const countries = [
+export const Country = [
   {
     name: "Afghanistan",
     capital: "Kabul",

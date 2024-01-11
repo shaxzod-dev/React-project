@@ -3,7 +3,7 @@ import "./style.css";
 import rate from "../../assets/rate.svg";
 import Gift from "../../assets/gift.svg";
 
-const Card = ({ img, imgX, title, sub, price1, price2 }) => {
+export const Card = ({ img, imgX, title, sub, price1, price2 }) => {
   return (
       <div className="card">
         <div className="card-img">

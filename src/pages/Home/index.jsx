@@ -1,10 +1,45 @@
-import React, { useState } from "react";
 import { Header } from "../../component/header";
 import "./style.css";
-import { countries } from "../../component/Data";
+import img from "../../assets/card-img.png";
+import imgX from "../../assets/X.svg";
+import img2 from "../../assets/card-img_2.png";
+import imgY from "../../assets/Y-img.svg";
+import img3 from "../../assets/card-img_3.png";
 import Card from "../../component/cards";
+import Countries from "../../component/Card";
+import { useState } from "react";
+import { Country } from "../../component/Data";
 
 const Home = () => {
+  // const CardsMap = [
+  //   {
+  //     id: 0,
+  //     img: img,
+  //     imgX: imgX,
+  //     title: "Вариативный замок Golden Soft для отеля",
+  //     sub: "Нет в наличии",
+  //     price1: "7 000₽",
+  //     price2: "8 000₽",
+  //   },
+  //   {
+  //     id: 1,
+  //     img: img2,
+  //     imgX: imgY,
+  //     title: "Дверной Замок Golden Soft для офиса",
+  //     sub: "В наличии",
+  //     price1: "33 000₽",
+  //     price2: "39 000₽",
+  //   },
+  //   {
+  //     id: 2,
+  //     imgX: imgY,
+  //     img: img3,
+  //     title: "Дверной Замок Golden Soft для офиса",
+  //     sub: "В наличии",
+  //     price1: "9 000₽",
+  //     price2: "12 000₽",
+  //   },
+  // ];
   // let Data = [];
   // async function getData() {
   //   return await fetch("https://jsonplaceholder.typicode.com/todos")
@@ -14,54 +49,56 @@ const Home = () => {
   // getData();
 
   // console.log(Data);
-  const [countryName, setCountryName] = useState("");
+  const [CountryName, setCountry] = useState("");
   const [result, setResult] = useState({});
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("")
+
   function handleChange(e) {
-    e.target.value;
+    setCountry(e.target.value);
   }
   function handleSubmit(e) {
     e.preventDefault();
-    if (countryName.length) {
-      countries.filter((el) => {
-        if (el.name == countryName) {
+    if (CountryName.length) {
+      Country.filter((el) => {
+        if (el.name == CountryName) {
           setResult(el);
         } else {
-          setMessage("Country not found");
+          setMessage("Country not found")
         }
       });
     }
   }
+  console.log(result);
   return (
     <div>
       <Header Logo={"Header-logo"} />
       <div className="container">
-        {/* <h2 className="title">Home</h2> */}
-        <div className="content">
-          <form>
+        <h2 className="title">Home</h2>
+        {/* <div className="content">
+          {CardsMap.map((el) => (
+            <Card key={el.id} {...el} />
+          ))}
+        </div> */}
+        <div className="Country-content">
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Search any country"
               className="input"
+              placeholder="Search"
               onChange={(e) => handleChange(e)}
             />
-            <button type="submit" className="btn">
+            <button className="country-btn" type="submit">
               Click
             </button>
           </form>
           {Object.keys(result).length ? (
-            <Card {...result} />
+            <Countries {...result} />
           ) : (
-            <h2>{message}</h2>
+            <h3>{message}</h3>
           )}
-          {/* {countries.map((el) => (
-              <div className="country">
-                <p className="country-text">Name:{el.name}</p>
-                <p className="a-country-text">Capital:{el.capital}</p>
-                <p className="c-country-text">Currency:{el.currency}</p>
-                <p className="d-country-text">Population:{el.population}</p>
-              </div>
-            ))} */}
+          {/* {Country.map((el, i) => (
+            <Countries key={i} {...el} />
+          ))} */}
         </div>
       </div>
     </div>

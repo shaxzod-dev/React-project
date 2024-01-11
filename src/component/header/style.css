@@ -16,12 +16,6 @@
   align-items: center;
 }
 
-.cantent{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .logo {
   color: coral;
 }

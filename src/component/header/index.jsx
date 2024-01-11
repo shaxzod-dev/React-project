@@ -5,7 +5,7 @@ export function Header({ Logo }) {
   return (
     <header className="page-header">
       <div className="container">
-        <div className="cantent">
+        <div className="content">
           <Link to={"/"} className="logo">
             {Logo}
           </Link>

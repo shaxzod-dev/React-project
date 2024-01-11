@@ -1,0 +1,9 @@
+.country-card {
+}
+
+.country-title span,
+.country-capital span,
+.country-currency span,
+.country-population span {
+  color: blue;
+}

@@ -1,0 +1,18 @@
+.counter-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.minus,
+.plus,
+.nums{
+    font-size: 72px;
+    font-weight: 400;
+    border: 1px solid #000;
+    width: 200px;
+    text-align: center;
+}
