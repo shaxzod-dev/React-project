@@ -80,7 +80,7 @@ const Home = () => {
             <Card key={el.id} {...el} />
           ))}
         </div> */}
-        <div className="Country-content">
+        <div className="Country-content Country-center">
           <form onSubmit={handleSubmit}>
             <input
               type="text"

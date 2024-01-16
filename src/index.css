@@ -23,3 +23,7 @@ button {
   justify-content: space-between;
   gap: 30px;
 }
+
+.title{
+  margin-top: 30px;
+}

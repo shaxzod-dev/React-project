@@ -1,60 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { Header } from "../../component/header";
-import Users from "../../component/Users";
 import "./style.css";
-import { json } from "react-router-dom";
-import API from "../../component/BtnComponents";
+import API from "../../component/API";
+import RandomUsers from "../../component/RandomUser";
 
 const Services = () => {
-  const [data, setData] = useState([]);
-  const [api, setApi] = useState('');
-  async function getData() {
-    return await fetch(`https://jsonplaceholder.typicode.com/${api}`)
-      .then((res) => res.json())
-      .then((json) => setData(json));
+  const [num, setNum] = useState(0);
+  const [state, setState] = useState(false);
+  function plus() {
+    if (num > 9) {
+      setState(true);
+    }
+    setNum(num + 1);
+  }
+  function minus() {
+    setNum(num - 1);
   }
   useEffect(() => {
-    getData();
-  }, [api]);
-  console.log(data);
+    console.log("render");
+  }, [state]);
   return (
     <div>
       <Header Logo={"Header-logo"} />
-      <div className="card-container">
+      <div className="container">
         <h2 className="title">Services</h2>
-        {/* <ol className="users-container">
-          {data.map((el, id) => (
-            <Users key={id} {...el} />
-          ))}
-        </ol> */}
-        <div className="Info">
-          {api.map((el) => (
-            <API key={el.id} {...el} />
-          ))}
-        </div>
-        <div className="container">
-          <button
-            onClick={() => {
-              setApi("posts");
-            }}
-          >
-            Posts
+        <h2 className="title">{num}</h2>
+        <div className="btn-group">
+          <button className="counter-btn" width={100} onClick={minus}>
+            -
           </button>
-          <button
-            onClick={() => {
-              setApi("albums");
-            }}
-          >
-            Albums
-          </button>
-          <button
-            onClick={() => {
-              setApi("todos");
-            }}
-          >
-            Todos
+          <button className="counter-btn" width={100} onClick={plus}>
+            +
           </button>
         </div>
+        <RandomUsers />
       </div>
     </div>
   );

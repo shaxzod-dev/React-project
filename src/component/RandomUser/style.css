@@ -1,0 +1,7 @@
+.random-content{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: column;
+}

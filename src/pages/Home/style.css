@@ -6,7 +6,13 @@
   margin-top: 50px;
 }
 
-form{
+.Country-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
   display: flex;
   gap: 30px;
 }

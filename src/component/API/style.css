@@ -1,0 +1,35 @@
+.users-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.card-container {
+  max-width: 1350px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.api-content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.api-btn {
+  padding: 10px;
+  border: 1px solid cornflowerblue;
+  border-radius: 6px;
+  background-color: #fff;
+  color: cornflowerblue;
+  transition: 0.4s;
+}
+
+.api-btn:hover {
+  background-color: cornflowerblue;
+  color: #fff;
+}

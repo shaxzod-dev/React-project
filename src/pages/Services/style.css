@@ -1,19 +1,22 @@
-.users-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin-top: 30px; 
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.card-container {
-  max-width: 1350px;
-  width: 100%;
-  padding: 0 20px;
-  margin: 0 auto;
+.counter-btn {
+  width: 35px;
+  height: 35px;
+  border: 1px solid darkcyan;
+  background-color: #fff;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-.Info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;;
+.counter-btn:hover {
+  background-color: darkcyan;
+  color: #000;
 }
