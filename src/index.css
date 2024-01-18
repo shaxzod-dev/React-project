@@ -24,6 +24,16 @@ button {
   gap: 30px;
 }
 
-.title{
+.title {
   margin-top: 30px;
+}
+
+.bg-light {
+  background-color: #fff;
+  margin-block: 20px;
+}
+
+.bg-dark {
+  background-color: bisque;
+  margin-block: 20px;
 }

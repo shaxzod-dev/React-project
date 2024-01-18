@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Header } from "../../component/header";
+import { ThemeContext } from "../../Context/useTheme";
 
 const Contacts = () => {
   return (
