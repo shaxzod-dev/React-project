@@ -4,7 +4,7 @@ import "./style.css";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-const API = () => {
+export const API = () =>{ 
   const [data, setData] = useState([]);
   const [api, setApi] = useState("posts");
   const loadingArr = Array.from({ length: 15 });
